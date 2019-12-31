@@ -1,0 +1,85 @@
+@mixin hover_bg_color($color) {
+  background-color: $color;
+}
+
+@mixin button_factory($bg_color, $font_size, $border_raius, $padding_size: 0) {
+  background-color: $bg_color;
+  border-style: none;
+  font-size: $font_size;
+  border-radius: $border_raius;
+  cursor: pointer;
+  @if $padding_size != 0 {
+    padding: $padding_size;
+  } @else {
+    padding: 0.375rem;
+  }
+}
+
+
+
+
+
+
+
+
+.navbar_container {
+  display: flex;
+  flex-direction: row;
+  background-color:  rgb(18, 29, 51);
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+  // border: 2px solid firebrick;
+  height: 4rem;
+  font-size: 1.2rem;
+
+  .navbar_item {
+    // border: 2px solid gainsboro;
+    display: flex;
+    height: 2rem;
+    width: 40rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar_link {
+    // border: 2px solid firebrick;
+    display: flex;
+    height: 2rem;
+    width: 30rem;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+
+    li {
+      cursor: pointer;
+      &:hover {
+        color: lightblue;
+      //   @include hover_bg_color(lightblue)
+      }
+    }
+  }
+
+  .control_container {
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+  }
+
+  .button_login {
+    @include button_factory(rgb(53, 63, 82), 1.2rem, 0.25rem);
+    color: white;
+    &:hover {
+      @include hover_bg_color(lightblue)
+    }
+  }
+
+  .button_sign {
+    @include button_factory(rgb(12, 108, 242), 1.2rem, 0.25rem);
+    color: white;
+    &:hover {
+      @include hover_bg_color(lightblue)
+    }
+  }
+}
+
