@@ -1,0 +1,16 @@
+.sidebar_container {
+  // border: 2px solid yellowgreen;
+  width: 11rem;
+  color: white;
+  min-height: calc(100vh - 70px);
+  background-color:  rgb(18, 29, 51);
+  font-size: 20px;
+
+  .sidebar_items {
+    // border: 2px solid red;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
