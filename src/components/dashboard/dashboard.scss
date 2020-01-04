@@ -1,6 +1,23 @@
+@mixin convent_px_to_rem($px) {
+  $base: 16;
+  height: #{ $px / $base }rem;
+}
+
 .dashboard_container {
-  border: 1px solid forestgreen;
-  min-height: calc(100vh - 70px);
-  // max-width: 100%;
-  min-width: calc(100vw - 11rem);
+  height: 94vh;
+  
+  .dashboard_item1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 31.5vh;
+    div {
+      border: 1px solid blue;
+    }
+  }
+
+  .dashboard_item2 {
+    display: flex;
+    height: 62vh;
+    border: 1px solid purple;
+  }
 }

@@ -29,12 +29,11 @@
   justify-content: space-between;
   color: white;
   align-items: center;
-  // border: 2px solid firebrick;
-  height: 4rem;
+  // height: 4rem;
+  height: 6vh;
   font-size: 1.2rem;
 
   .navbar_item {
-    // border: 2px solid gainsboro;
     display: flex;
     height: 2rem;
     width: 40rem;
@@ -43,7 +42,6 @@
   }
 
   .navbar_link {
-    // border: 2px solid firebrick;
     display: flex;
     height: 2rem;
     width: 30rem;
@@ -55,7 +53,6 @@
       cursor: pointer;
       &:hover {
         color: lightblue;
-      //   @include hover_bg_color(lightblue)
       }
     }
   }
