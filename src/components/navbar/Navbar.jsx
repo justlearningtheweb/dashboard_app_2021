@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <nav className="navbar_container">
       <div className="navbar_item">
-        <p>Andromeda</p>
+        <p>Logo</p>
         <ul className="navbar_link">
           <li>Overview</li>
           <li>Analytics</li>

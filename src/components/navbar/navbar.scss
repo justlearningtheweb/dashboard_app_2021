@@ -1,6 +1,16 @@
 @mixin hover_bg_color($color) {
   background-color: $color;
 }
+@mixin convent_px_to_rem($key ,$px) {
+  $base: 16;
+  @if ($key == font-size) {
+    font-size: #{ $px / $base }rem;
+  } @else if ($key == height) {
+    height: #{ $px / $base }rem;
+  } @else {
+    @error "Unknown direction #{$key}.";
+  }
+}
 
 @mixin button_factory($bg_color, $font_size, $border_raius, $padding_size: 0) {
   background-color: $bg_color;
@@ -15,13 +25,6 @@
   }
 }
 
-
-
-
-
-
-
-
 .navbar_container {
   display: flex;
   flex-direction: row;
@@ -29,9 +32,8 @@
   justify-content: space-between;
   color: white;
   align-items: center;
-  // height: 4rem;
-  height: 6vh;
-  font-size: 1.2rem;
+  height: 6vh;  
+  @include convent_px_to_rem(font-size, 28);
 
   .navbar_item {
     display: flex;

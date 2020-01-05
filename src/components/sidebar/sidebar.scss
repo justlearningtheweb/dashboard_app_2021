@@ -1,10 +1,20 @@
+@mixin convent_px_to_rem($key ,$px) {
+  $base: 16;
+  @if ($key == font-size) {
+    font-size: #{ $px / $base }rem;
+  } @else if ($key == height) {
+    height: #{ $px / $base }rem;
+  } @else {
+    @error "Unknown direction #{$key}.";
+  }
+}
+
 .sidebar_container {
-  width: 11rem;
+  width: 13rem;
   color: white;
   height: 94vh;
-  // min-height: calc(100vh - 70px);
   background-color:  rgb(18, 29, 51);
-  font-size: 20px;
+  @include convent_px_to_rem(font-size, 28);
 
   .sidebar_items {
     height: 30rem;
