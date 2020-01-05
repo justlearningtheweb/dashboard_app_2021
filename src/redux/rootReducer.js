@@ -1,20 +1,19 @@
-const SET_USER_TO_STATE = 'SET_USER_TO_STATE'
+const SET_USER = 'SET_USER'
 
 const initialState = {
-  name: 'VU',
   user: null
 }
 
 function setUserToStateAction(payload) {
   return {
-    type: SET_USER_TO_STATE,
+    type: SET_USER,
     payload
   }
 }
 
 function rootReducer(state = initialState, action) {
   switch(action.type) {
-    case SET_USER_TO_STATE: {
+    case SET_USER: {
       return Object.assign({}, state, {
         user: action.payload
       })

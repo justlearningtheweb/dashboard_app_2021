@@ -14,12 +14,24 @@
   color: white;
   height: 94vh;
   background-color:  rgb(18, 29, 51);
+  padding-top: 50px;
   @include convent_px_to_rem(font-size, 28);
 
   .sidebar_items {
-    height: 30rem;
+    height: 11rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding-left: 5px;
+
+   a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+
+    &:hover {
+      background-color: blueviolet;
+    }
+   }
   }
 }

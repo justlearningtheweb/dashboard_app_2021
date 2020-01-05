@@ -3,7 +3,7 @@ import './sidebar.scss'
 import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
 import { setUserToStateAction } from '../../redux/rootReducer'
-
+import { Link } from 'react-router-dom'
 function Sidebar(props) {
 //   let regionList = ['---', 'AU', 'BR', 'CA', 'CH', 'DE', 'DK', 'ES', 'FI', 'FR', 'GB', 'IE', 'IR', 'NO', 'NL', 'NZ', 'TR', 'US']
 //   let renderRegionListTemplate = []
@@ -33,15 +33,23 @@ function Sidebar(props) {
 //   }
   return (
     <aside className="sidebar_container">
-      <div className="sidebar_items">
-        <ul className="">
-          <li>Home</li>
-          <li>Message</li>
-          <li>User</li>
-          <li>Report</li>
-          <li>Setting</li>
-        </ul>
-      </div>
+      <ul className="sidebar_items">
+        <Link to="">
+          Home
+        </Link>
+        <Link to="">
+          Message
+        </Link>
+        <Link to="">
+          User
+        </Link>
+        <Link to="">
+          Report
+        </Link>
+        <Link to="">
+          Setting
+        </Link>
+      </ul>
     </aside>
   )
 }
