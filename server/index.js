@@ -1,9 +1,7 @@
 const express = require('express')
 const app = express()
 const PORT = 4000
-const console = require('./helper/consoleStyle')
-const fetch = require('node-fetch')
-const jsonFormatter = require('./helper/jsonStringify')
+const { loadUser, getUser } = require('./controllers/usersData')
 
 // Middleware
 app.use(express.json())
@@ -21,19 +19,10 @@ app.get('/', function (req, res) {
 })
 
 // Endpoint
-app.get('/get_user', function (req, res, next) {
-  console.log('enter meeee')
-  fetch('https://randomuser.me/api/?nat=US&results=1')
-  .then(function (response) {
-    return response.json()
-  })
-  .then(function (result) {
-     console.log(jsonFormatter(result))
-  })
-  .catch(function (err) {
-    console.error(`Danger unable to fetch user ${err}`)
-  })
-})
+app.get('/user/load_user', loadUser)
+app.get('/user/get_user', getUser)
+
+
 app.listen(PORT, function () {
   console.log('API is up and listen on port ' + PORT)
 })

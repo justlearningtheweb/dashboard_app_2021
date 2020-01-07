@@ -5,7 +5,7 @@
 
 ## Goal and Idea
 We are build Dashboard for track social media system CMS(Customer Management Software)
-* There will be account creation for end-user to use to custom there profile.
+* There will be account creation for end-user to use to custom their profile.
 * chat system with-in this system.
 * chart analysis for diffrent type of data. 
 

@@ -1,13 +1,24 @@
 import React from 'react'
 import './dashboard.scss'
+import BarChart from '../chart/BarChart'
+import PieChart from '../chart/PieChart'
 
 class Dashboard extends React.Component {
+  state = {
+    user: [],
+    ageGroup: null
+  }
 
   componentDidMount() {
-    console.log('on mount')
-    fetch('http://localhost:4000/get_user')
+    fetch('http://localhost:4000/user/load_user')
+    fetch('http://localhost:4000/user/get_user')
     .then(function (response) {
-      console.log(response)
+      return response.json()
+    })
+    .then((response) => {
+      this.setState({
+        user: response
+      })
     })
     .catch(function (err) {
       console.error('Danger!' + err)
@@ -18,10 +29,10 @@ class Dashboard extends React.Component {
       <section className="dashboard_container">
         <div className="dashboard_item1">
           <div>
-              <p>Box 1</p>
+            <BarChart user={this.state.user} />
           </div>
           <div>
-              <p>Box 2</p>
+            <PieChart user={this.state.user} />
           </div>
         </div>
         <div className="dashboard_item2">
