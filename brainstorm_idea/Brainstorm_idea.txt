@@ -1,0 +1,20 @@
+Brainstorm idea
+** Feel feel to add your idea here**
+
+Message system:
+  chat Message
+  user profile
+
+User Profile:
+  title
+  picture
+  username
+  password
+
+Report system:
+  chart display data
+  diffrent type graphic
+
+Setting system:
+  Allow changet backgroundColor, etc
+  Adject some Setting
